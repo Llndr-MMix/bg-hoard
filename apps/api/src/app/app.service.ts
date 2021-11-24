@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Game } from '@bg-hoard/api/util-interface';
+import { Game } from '@bg-hoard/util-interface';
 
-const games : Game[]= [
+const games: Game[] = [
   {
     id: 'settlers-in-the-can',
     name: 'Settlers in the Can',
@@ -26,7 +26,7 @@ const games : Game[]= [
     description: 'A cat grooming contest goes horribly wrong.',
     price: 45,
     rating: Math.random(),
-  }
+  },
 ];
 @Injectable()
 export class AppService {
