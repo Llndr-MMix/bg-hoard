@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getHeader } from '../support/app.po';
 
 describe('store', () => {
   beforeEach(() => cy.visit('/'));
@@ -8,6 +8,6 @@ describe('store', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to store!');
+    getHeader().contains('Board Game Hoard');
   });
 });
