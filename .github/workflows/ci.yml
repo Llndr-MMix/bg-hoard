@@ -8,6 +8,8 @@ jobs:
     name: Building affected apps
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
         with:
@@ -19,6 +21,8 @@ jobs:
     name: Testing affected apps
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
         with:
@@ -30,6 +34,8 @@ jobs:
     name: Linting affected apps
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
         with:
@@ -41,6 +47,8 @@ jobs:
     name: E2E testing affected apps
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
         with:
